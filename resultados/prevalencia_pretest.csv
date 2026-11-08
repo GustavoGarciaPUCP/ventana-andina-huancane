@@ -1,0 +1,7 @@
+﻿thermal,split,candidate_n,valid_n,invalid_n,positive_n,prevalence
+-3,entrenamiento,5400,5400,0,2263,0.419074074074
+-3,validacion,900,900,0,335,0.372222222222
+-2,entrenamiento,5400,5400,0,2767,0.512407407407
+-2,validacion,900,900,0,429,0.476666666667
+-4,entrenamiento,5400,5400,0,1690,0.312962962963
+-4,validacion,900,900,0,256,0.284444444444

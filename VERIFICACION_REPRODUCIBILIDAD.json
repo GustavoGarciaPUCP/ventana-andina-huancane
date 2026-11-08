@@ -1,0 +1,11 @@
+{
+  "notebook_executed_locally": true,
+  "google_colab_cloud_executed": false,
+  "comparison": {
+    "metricas_prueba.csv": "coincide rtol1e-10 atol1e-12",
+    "metricas_prueba_anuales.csv": "coincide rtol1e-10 atol1e-12",
+    "alpha_validacion.csv": "coincide rtol1e-10 atol1e-12",
+    "cv_resumen.csv": "coincide rtol1e-10 atol1e-12",
+    "bootstrap_intervalos_diferencias.csv": "coincide rtol1e-10 atol1e-12"
+  }
+}

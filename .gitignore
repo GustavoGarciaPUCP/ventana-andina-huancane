@@ -1,0 +1,6 @@
+*.nc
+*.joblib
+*.npy
+__pycache__/
+.venv/
+venv/
