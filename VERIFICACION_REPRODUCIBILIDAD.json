@@ -1,21 +1,24 @@
 {
-  "notebook_executed_locally": true,
+  "notebook_version": "Drive, celdas Python legibles, 2026-11-08",
+  "notebook_sha256": "340e8645cbdf6eaa7c4347d66988519845469f0ee62a2e8006e1a23036714d2d",
+  "executed_in_real_jupyter_kernel": true,
+  "raw_netcdf_extraction_executed": true,
+  "embedded_data_or_precomputed_predictions_used_for_training": false,
   "google_colab_cloud_executed": false,
+  "drive_oauth_executed": false,
   "comparison": {
-    "metricas_prueba.csv": "coincide rtol1e-10 atol1e-12",
-    "metricas_prueba_anuales.csv": "coincide rtol1e-10 atol1e-12",
-    "alpha_validacion.csv": "coincide rtol1e-10 atol1e-12",
-    "cv_resumen.csv": "coincide rtol1e-10 atol1e-12",
-    "bootstrap_intervalos_diferencias.csv": "coincide rtol1e-10 atol1e-12",
-    "resumen_descriptivo.json": "coincide"
+    "metricas_prueba.csv": "Coincide rtol=1e-10 atol=1e-12",
+    "metricas_prueba_anuales.csv": "Coincide rtol=1e-10 atol=1e-12",
+    "alpha_validacion.csv": "Coincide rtol=1e-10 atol=1e-12",
+    "cv_resumen.csv": "Coincide rtol=1e-10 atol=1e-12",
+    "bootstrap_intervalos_diferencias.csv": "Coincide rtol=1e-10 atol=1e-12",
+    "eda_mensual_entrenamiento.csv": "Coincide rtol=1e-10 atol=1e-12",
+    "predicciones_prueba_m2.csv": "Coinciden probabilidades y avisos de todas las fechas",
+    "predicciones_prueba_m3.csv": "Coinciden probabilidades y avisos de todas las fechas",
+    "predicciones_prueba_m4.csv": "Coinciden probabilidades y avisos de todas las fechas"
   },
-  "notebook_sha256": "fb525a039f828d40498600e473fa853660a2d18a6c574db9e9def023c6613db9",
   "automatic_reference_metric_check_passed": true,
-  "package_versions_local": {
-    "python": "3.12.14",
-    "numpy": "2.5.4",
-    "pandas": "3.1.1",
-    "scikit-learn": "1.9.1",
-    "joblib": "1.6.0"
-  }
+  "preprocessing_audit_rows": 96,
+  "code_sha256": "e01425d6c6f3e55c18d0b14a99eae358366d4a083a5140274a77f9101784db68",
+  "editorial_markdown_only_after_execution": true
 }

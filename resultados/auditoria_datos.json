@@ -14,6 +14,17 @@
       "latitude_index": 164,
       "longitude": -69.75500000000001,
       "longitude_index": 116,
+      "metadata_validation": {
+        "dimensions_checked": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "grid_spacing_degrees_checked": 0.1,
+        "metadata_min_max_not_used_for_clipping": true,
+        "temperature_units_confirmed": "Celsius",
+        "temperature_units_evidence": "maximum temperature (°C)"
+      },
       "shape": [
         14610,
         199,
@@ -35,6 +46,17 @@
       "latitude_index": 164,
       "longitude": -69.75500000000001,
       "longitude_index": 116,
+      "metadata_validation": {
+        "dimensions_checked": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "grid_spacing_degrees_checked": 0.1,
+        "metadata_min_max_not_used_for_clipping": true,
+        "temperature_units_confirmed": "Celsius",
+        "temperature_units_evidence": "minimum temperature (°C)"
+      },
       "shape": [
         14610,
         199,

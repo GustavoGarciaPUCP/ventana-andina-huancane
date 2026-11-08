@@ -1,0 +1,48 @@
+{
+  "revision": "2026-11-08: notebook legible desde Drive y preprocesamiento visible",
+  "informe_paginas_contenido": 4,
+  "informe_paginas_bibliografia": 1,
+  "plantilla_conservada": true,
+  "fuente_y_doble_columna_originales": true,
+  "diapositivas": 11,
+  "graficos_editables": 2,
+  "exportacion_nativa_powerpoint_verificada": true,
+  "inspeccion_visual_paginas_y_diapositivas": true,
+  "notebook_celdas": 50,
+  "notebook_celdas_codigo": 33,
+  "ejecucion_kernel_jupyter_real_sin_errores": true,
+  "lectura_netcdf_originales_verificada": true,
+  "nueve_csv_identicos_a_originales": true,
+  "auditoria_escalado_filas": 96,
+  "pruebas_unidades_malla_dimensiones": true,
+  "revision_independiente": true,
+  "ejecucion_nube_colab": false,
+  "autenticacion_oauth_drive": false,
+  "pendientes_del_grupo": [
+    "Completar contribuciones reales",
+    "Conceder lectura del repositorio privado a evaluadores",
+    "Revisar y asumir la version presentada"
+  ],
+  "archivos": {
+    "Grupo9-TA-Final.pdf": {
+      "bytes": 266603,
+      "sha256": "bdc65fcbf4ab34e0bb54234171276d27c160c64d177da152dcf71333565086c9"
+    },
+    "Grupo9-TA-Final.docx": {
+      "bytes": 658504,
+      "sha256": "abc8aeb73c5414d61082dc597ff43e28cba31601f1c56ed4a975275da36c268f"
+    },
+    "Grupo9-TA-Exposicion.pptx": {
+      "bytes": 55006,
+      "sha256": "0643f3011ff0f789bceee37c1fe49d81a95485eae93b5720d3c4803218d96e41"
+    },
+    "Grupo9-Huancane-Colab-Drive.ipynb": {
+      "bytes": 90108,
+      "sha256": "340e8645cbdf6eaa7c4347d66988519845469f0ee62a2e8006e1a23036714d2d"
+    },
+    "Grupo9-Experimento-Huancane.ipynb": {
+      "bytes": 90108,
+      "sha256": "340e8645cbdf6eaa7c4347d66988519845469f0ee62a2e8006e1a23036714d2d"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "caso": "valido",
+    "cumple": true,
+    "resultado": "Aceptado"
+  },
+  {
+    "caso": "kelvin",
+    "cumple": true,
+    "resultado": "No se pudo confirmar Celsius: 'K'"
+  },
+  {
+    "caso": "malla005",
+    "cumple": true,
+    "resultado": "latitude: se esperaba la malla 010 (0,10 grados)"
+  },
+  {
+    "caso": "dimensiones",
+    "cumple": true,
+    "resultado": "Dimensiones inesperadas de tmin: ('time', 'longitude', 'latitude')"
+  }
+]

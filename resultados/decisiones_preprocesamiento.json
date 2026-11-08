@@ -1,0 +1,21 @@
+{
+  "clases": "Frecuencia original, sin SMOTE ni pesos diferenciados; umbrales elegidos en validación.",
+  "control": [
+    "dimensiones",
+    "unidad Celsius",
+    "malla 0.10",
+    "fechas",
+    "duplicados",
+    "calendario completo",
+    "finitud",
+    "Tmin <= Tmax"
+  ],
+  "dias_invalidos": 0,
+  "dimensionalidad": "16 atributos predefinidos; no se aplica PCA ni selección posterior basada en prueba.",
+  "escalado": "StandardScaler dentro del pipeline de logística y KNN, aprendido solo en entrenamiento de cada pliegue; árbol sin escalado.",
+  "extremos": "Se conservan; las heladas son el fenómeno objetivo. IQR mensual solo describe, no elimina ni recorta.",
+  "imputacion": "Ninguna: se excluyen ventanas inválidas. En estos originales no se requieren exclusiones.",
+  "limpieza": "Día inválido invalida cualquier ventana que lo use en historia u objetivo; no se rellena la etiqueta.",
+  "metadata_min_max": "No se usan para recortar: no describen todos los extremos de esta celda.",
+  "periodo_diagnostico": "1981-2010"
+}

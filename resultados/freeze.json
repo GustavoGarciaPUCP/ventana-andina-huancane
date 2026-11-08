@@ -3,7 +3,8 @@
   "alpha_tie": "higher alpha",
   "beta1_scope": "secondary; same configurations, fitted models, probabilities and alpha as beta0.5",
   "bootstrap": "1000 paired calendar moving-block samples; six blocks of30 per season within each of five fixed test years; shared mask and indices; seed2026",
-  "code_sha256": "1f82b9968beb5cbcff849860ed6b9d3ae89a74a60d96aa35c08cfd3a5b3a4191",
+  "code_hash_scope": "Funciones ejecutadas y parámetros predefinidos; codigo_ejecutado.py",
+  "code_sha256": "e01425d6c6f3e55c18d0b14a99eae358366d4a083a5140274a77f9101784db68",
   "config_tie": "lower C; lower depth then larger leaf; larger k",
   "decisions": {
     "-2": {
