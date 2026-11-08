@@ -1,0 +1,19 @@
+{
+  "alcance": "Descripcion posterior de salidas, sin nuevas decisiones de ajuste",
+  "thermal": -3,
+  "beta": 0.5,
+  "n": 900,
+  "desacuerdo_avisos_logistica_arbol": 56,
+  "fraccion_desacuerdo": 0.06222222222222222,
+  "episodios_prueba": 35,
+  "episodios_por_ano": {
+    "2016": 10,
+    "2017": 4,
+    "2018": 8,
+    "2019": 8,
+    "2020": 5
+  },
+  "subventanas_en_episodios": 330,
+  "positivos_prueba": 330,
+  "episodios_tocan_borde": 0
+}

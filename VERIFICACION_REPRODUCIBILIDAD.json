@@ -6,6 +6,16 @@
     "metricas_prueba_anuales.csv": "coincide rtol1e-10 atol1e-12",
     "alpha_validacion.csv": "coincide rtol1e-10 atol1e-12",
     "cv_resumen.csv": "coincide rtol1e-10 atol1e-12",
-    "bootstrap_intervalos_diferencias.csv": "coincide rtol1e-10 atol1e-12"
+    "bootstrap_intervalos_diferencias.csv": "coincide rtol1e-10 atol1e-12",
+    "resumen_descriptivo.json": "coincide"
+  },
+  "notebook_sha256": "fb525a039f828d40498600e473fa853660a2d18a6c574db9e9def023c6613db9",
+  "automatic_reference_metric_check_passed": true,
+  "package_versions_local": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
   }
 }
