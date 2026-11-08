@@ -1,5 +1,5 @@
 {
-  "revision": "2026-11-08: notebook legible desde Drive y preprocesamiento visible",
+  "revision": "2026-11-08: ejecución Colab del usuario auditada y Word final actualizado",
   "informe_paginas_contenido": 4,
   "informe_paginas_bibliografia": 1,
   "plantilla_conservada": true,
@@ -16,8 +16,7 @@
   "auditoria_escalado_filas": 96,
   "pruebas_unidades_malla_dimensiones": true,
   "revision_independiente": true,
-  "ejecucion_nube_colab": false,
-  "autenticacion_oauth_drive": false,
+  "ejecucion_nube_colab": true,
   "pendientes_del_grupo": [
     "Completar contribuciones reales",
     "Conceder lectura del repositorio privado a evaluadores",
@@ -25,12 +24,12 @@
   ],
   "archivos": {
     "Grupo9-TA-Final.pdf": {
-      "bytes": 266603,
-      "sha256": "bdc65fcbf4ab34e0bb54234171276d27c160c64d177da152dcf71333565086c9"
+      "bytes": 266721,
+      "sha256": "7b571ac23f23299d95fb40468d711cca82267caaadbdbb054bc7e40c3641c66b"
     },
     "Grupo9-TA-Final.docx": {
-      "bytes": 658504,
-      "sha256": "abc8aeb73c5414d61082dc597ff43e28cba31601f1c56ed4a975275da36c268f"
+      "bytes": 658536,
+      "sha256": "a0f54c4a416eb5ccc5e035aafe97e32fbba443c81ac302c1efa6837060275c99"
     },
     "Grupo9-TA-Exposicion.pptx": {
       "bytes": 55006,
@@ -43,6 +42,15 @@
     "Grupo9-Experimento-Huancane.ipynb": {
       "bytes": 90108,
       "sha256": "340e8645cbdf6eaa7c4347d66988519845469f0ee62a2e8006e1a23036714d2d"
+    },
+    "Grupo9-Guia-Resultados-y-Defensa.pdf": {
+      "bytes": 102384,
+      "sha256": "578bf50a038833f6c14d11cb7cedccf64dce608583a7e0547dae4c83df825577"
     }
-  }
+  },
+  "ejecucion_colab_usuario_auditada": true,
+  "csv_colab_contrastados": 26,
+  "guia_comprension_paginas": 10,
+  "fuente_evidencia_colab": "ZIP remitido por el usuario",
+  "autenticacion_oauth_drive_observada_por_agente": false
 }

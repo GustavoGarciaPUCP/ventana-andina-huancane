@@ -1,0 +1,392 @@
+{
+  "origen": "ZIP remitido por el usuario tras ejecución en Colab",
+  "archivos_zip": 43,
+  "colab_declarado_en_salida": true,
+  "huella_codigo_confirmada": true,
+  "manifiestos_coinciden": true,
+  "versions_colab": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "python": "3.13.18",
+    "sklearn": "1.9.1"
+  },
+  "versions_local": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "python": "3.12.14",
+    "sklearn": "1.9.1"
+  },
+  "comparacion_csv": {
+    "alpha_validacion.csv": {
+      "filas": 15,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "auditoria_escalado.csv": {
+      "filas": 96,
+      "max_diferencia_numerica": 5.263279524099998e-18,
+      "bytes_identicos": false
+    },
+    "bootstrap_diferencias_1000.csv": {
+      "filas": 38000,
+      "max_diferencia_numerica": 1.0000333894311098e-13,
+      "bytes_identicos": false
+    },
+    "bootstrap_intervalos_diferencias.csv": {
+      "filas": 114,
+      "max_diferencia_numerica": 1.0000409788463172e-16,
+      "bytes_identicos": false
+    },
+    "bootstrap_intervalos_metricas.csv": {
+      "filas": 180,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "bootstrap_metricas_1000.csv": {
+      "filas": 36000,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "busqueda_umbrales_validacion.csv": {
+      "filas": 11100,
+      "max_diferencia_numerica": 9.999640004920707e-14,
+      "bytes_identicos": false
+    },
+    "celda_diaria.csv": {
+      "filas": 14610,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "cv_folds.csv": {
+      "filas": 108,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "cv_resumen.csv": {
+      "filas": 36,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "diagnostico_extremos_entrenamiento.csv": {
+      "filas": 24,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "eda_mensual_entrenamiento.csv": {
+      "filas": 18,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "episodios_pretest.csv": {
+      "filas": 808,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "episodios_prueba.csv": {
+      "filas": 108,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "metricas_prueba.csv": {
+      "filas": 36,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "metricas_prueba_anuales.csv": {
+      "filas": 180,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "metricas_validacion.csv": {
+      "filas": 36,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "predicciones_prueba_m2.csv": {
+      "filas": 900,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "predicciones_prueba_m3.csv": {
+      "filas": 900,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "predicciones_prueba_m4.csv": {
+      "filas": 900,
+      "max_diferencia_numerica": 1.0000680839006293e-14,
+      "bytes_identicos": false
+    },
+    "predicciones_validacion_m2.csv": {
+      "filas": 900,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "predicciones_validacion_m3.csv": {
+      "filas": 900,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "predicciones_validacion_m4.csv": {
+      "filas": 900,
+      "max_diferencia_numerica": 9.999640004920707e-14,
+      "bytes_identicos": false
+    },
+    "prevalencia_pretest.csv": {
+      "filas": 6,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "prevalencia_prueba.csv": {
+      "filas": 3,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    },
+    "resumen_temperaturas_entrenamiento.csv": {
+      "filas": 2,
+      "max_diferencia_numerica": 0.0,
+      "bytes_identicos": false
+    }
+  },
+  "filas_metricas_recalculadas": [
+    {
+      "thermal": -3,
+      "beta": 0.5,
+      "model": "logistica",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 0.5,
+      "model": "arbol",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 0.5,
+      "model": "knn",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 0.5,
+      "model": "mezcla",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 0.5,
+      "model": "frecuencia_mensual",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 0.5,
+      "model": "persistencia",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 1.0,
+      "model": "logistica",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 1.0,
+      "model": "arbol",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 1.0,
+      "model": "knn",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 1.0,
+      "model": "mezcla",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 1.0,
+      "model": "frecuencia_mensual",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -3,
+      "beta": 1.0,
+      "model": "persistencia",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 0.5,
+      "model": "logistica",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 0.5,
+      "model": "arbol",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 0.5,
+      "model": "knn",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 0.5,
+      "model": "mezcla",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 0.5,
+      "model": "frecuencia_mensual",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 0.5,
+      "model": "persistencia",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 1.0,
+      "model": "logistica",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 1.0,
+      "model": "arbol",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 1.0,
+      "model": "knn",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 1.0,
+      "model": "mezcla",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 1.0,
+      "model": "frecuencia_mensual",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -2,
+      "beta": 1.0,
+      "model": "persistencia",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 0.5,
+      "model": "logistica",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 0.5,
+      "model": "arbol",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 0.5,
+      "model": "knn",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 0.5,
+      "model": "mezcla",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 0.5,
+      "model": "frecuencia_mensual",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 0.5,
+      "model": "persistencia",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 1.0,
+      "model": "logistica",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 1.0,
+      "model": "arbol",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 1.0,
+      "model": "knn",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 1.0,
+      "model": "mezcla",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 1.0,
+      "model": "frecuencia_mensual",
+      "conteos_y_metricas_recalculados": true
+    },
+    {
+      "thermal": -4,
+      "beta": 1.0,
+      "model": "persistencia",
+      "conteos_y_metricas_recalculados": true
+    }
+  ],
+  "decisiones_sin_cambios": true,
+  "escalado": {
+    "filas": 96,
+    "n_fit": 5400,
+    "media_z_absoluta_max": 6.10540424801e-16,
+    "desviacion_z_igual_uno": true,
+    "validacion_prueba_fuera_del_fit": true
+  },
+  "datos": {
+    "dias": 14610,
+    "sin_huecos": true,
+    "sin_invalidos": true,
+    "celda": [
+      -15.225,
+      -69.755
+    ]
+  },
+  "tiempos_colab": {
+    "lectura_control": 7.941579264999973,
+    "prepare": 27.16848395400001,
+    "test": 75.72752865599995
+  },
+  "estado": "CONFORME: datos, decisiones, conteos, métricas y escalado reproducidos; no se detectan discrepancias materiales"
+}
