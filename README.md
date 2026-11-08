@@ -40,22 +40,4 @@ Se utiliza la malla **010 (0,10°)** del protocolo. Los archivos 005 pueden esta
 
 No se aplican SMOTE, PCA ni imputación por rutina: cambiarían el protocolo sin evidencia que lo justifique. Los controles y transformaciones anteriores constituyen el preprocesamiento y quedan visibles en el notebook.
 
-## Verificación
 
-El notebook se verificó localmente y el grupo lo ejecutó después en Colab. Se auditó su ZIP: 26 CSV coinciden dentro de la precisión numérica, se recalcularon 36 filas de métricas y se comprobaron 96 registros del escalado. Colab utilizó Python 3.13.18 y NumPy 2.4.6; el entorno local utilizó 3.12.14 y 2.5.4. Las decisiones y los conteos no cambiaron. La evidencia del usuario está en evidencia/colab_usuario y su revisión en evidencia/auditoria_colab_independiente.md.
-
-La prueba principal mantiene 900 emisiones, 330 positivas y 35 rachas frías. F0,5: logística 0,7916; persistencia 0,7152; mensual 0,6677. Brier: mezcla 0,113003 frente a 0,112431 de logística. La hipótesis complementaria sigue sin apoyo.
-
-En tu ZIP, abre `metricas_prueba.csv` y filtra `thermal=-3` y `beta=0.5`. `principal=True` indica la elección en validación. `verificacion_informe.json` registra si datos y cifras coinciden. Las cifras se comprueban después de evaluar; no se retocan modelos para forzar la coincidencia.
-
-## Pendientes del grupo
-
-Repositorio privado: https://github.com/GustavoGarciaPUCP/ventana-andina-huancane
-
-Completen las contribuciones reales, revisen la versión presentada y concedan lectura a los evaluadores. Los nombres para Paideia siguen siendo **Grupo9-TA-Final.pdf** y **Grupo9-TA-Exposicion.pptx**. Los resultados térmicos no demuestran por sí solos éxito de lotes ni pérdidas económicas evitadas.
-
-Las huellas de los datos se calculan por bytes. La huella lógica del programa utiliza las funciones y parámetros como texto normalizado, para funcionar de la misma manera en Windows y Colab.
-
-## Archivos para comprender y revisar
-
-Grupo9-Guia-Resultados-y-Defensa.pdf explica NetCDF, el feedback, el preprocesamiento, los resultados y los requisitos del PDF académico. Es material de estudio independiente del informe formal. El Word final incluye la ejecución real de Colab.
