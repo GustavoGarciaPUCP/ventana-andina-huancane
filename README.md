@@ -1,61 +1,57 @@
-# Ventana Andina
+# Ventanas frías en Huancané
 
-Entrega revisada el 8 de noviembre de 2026 · Grupo 9 · 1INF24 · PUCP
+Proyecto del Grupo 9 para el curso Inteligencia Artificial (1INF24) de la Pontificia Universidad Católica del Perú.
 
-## Archivos
+Estudiamos si la historia térmica reciente permite anticipar tres días consecutivos con temperaturas mínimas iguales o inferiores a −3 °C en una celda próxima a Huancané, Puno. Esta condición se plantea como un indicador para apoyar la planificación de la elaboración de chuño. La evaluación utiliza datos climáticos históricos; no mide la calidad del producto ni el resultado de los lotes.
 
-**Grupo9-Huancane-Colab-Drive.ipynb** es el notebook recomendado. **Grupo9-Experimento-Huancane.ipynb** contiene la misma versión para conservar el enlace anterior. Ambos muestran código Python normal, separado por etapas. No contienen datos comprimidos incrustados ni un programa convertido en una cadena enorme.
+Comparamos regresión logística, árbol de decisión, vecinos más cercanos y una combinación de las probabilidades de logística y árbol. Como referencias utilizamos persistencia y frecuencia mensual histórica.
 
-- **Grupo9-TA-Final.pdf**: informe con la plantilla del curso y bibliografía.
-- **Grupo9-TA-Final.docx**: editable para completar las contribuciones reales.
-- **Grupo9-TA-Exposicion.pptx**: presentación editable, con una lámina de preprocesamiento.
-- **codigo/**: implementación y dependencias.
-- **resultados/**: controles de calidad, diagnóstico, parámetros del escalado, decisiones y resultados.
-- **evidencia/Notebook-ejecutado-localmente.ipynb**: ejecución en un kernel Jupyter local, con tablas y gráficos; no acredita autenticación en Google Drive.
-- **VERIFICACION_REPRODUCIBILIDAD.json**: contraste de esta ejecución con los resultados anteriores.
+## Código
 
-## Ejecutar con tus datos de Drive
+- [Grupo9-Huancane-Colab-Drive.ipynb](Grupo9-Huancane-Colab-Drive.ipynb): notebook para ejecutar el experimento en Google Colab con datos de Drive.
+- [codigo/experimento.py](codigo/experimento.py): implementación del preprocesamiento, selección de modelos y evaluación.
+- [codigo/requirements.txt](codigo/requirements.txt): dependencias de la ejecución local de referencia.
 
-1. Abre https://colab.research.google.com/ y sube **Grupo9-Huancane-Colab-Drive.ipynb**.
-2. Ejecuta las celdas en orden. La sección 1 comprueba las dependencias; requiere Python 3.12 o superior y no necesita GPU.
-3. En **2. Conectar Google Drive**, autoriza el montaje de tu cuenta.
-4. En **3. Pegar la ruta de la carpeta**, completa `CARPETA_DATOS` con una ruta como `/content/drive/MyDrive/TA_IA/PISCOt`. Puedes copiarla desde el panel de archivos de Colab. El enlace web de una carpeta no reemplaza esa ruta.
-5. Si la carpeta es compartida, añádela a Mi unidad mediante un acceso directo y comprueba que Colab la muestre. Carpeta del grupo: https://drive.google.com/drive/folders/1wa0wVfFqymjVHS-fftfSNGHR8gEX83WP .
-6. Continúa ejecutando. Se muestra la lista de archivos de la carpeta y se seleccionan exactamente `tmin_daily_1981_2020_010.nc` y `tmax_daily_1981_2020_010.nc`.
-7. Por defecto se copian al almacenamiento temporal de Colab, aproximadamente 1,28 GB, para acelerar la lectura. No se modifican tus originales.
-8. Al final se comprueban las cifras principales y se descarga **resultados_grupo9_drive.zip**.
+## Datos
 
-Se utiliza la malla **010 (0,10°)** del protocolo. Los archivos 005 pueden estar en la carpeta, pero no se mezclan con esta resolución. Si hay dos copias de un archivo requerido, indica una carpeta más específica; el programa evita elegir una al azar.
+Utilizamos las temperaturas mínimas y máximas diarias de **PISCOt v1.2**, malla de 0,10°, para 1981–2020. La celda analizada está centrada en −15,225° de latitud y −69,755° de longitud.
 
-## Preprocesamiento aplicado
+Los archivos originales están disponibles en el [repositorio de PISCOt en Figshare](https://doi.org/10.6084/m9.figshare.22712365.v3):
 
-1. **Validación del origen:** nombres, dimensiones, coordenadas, malla, Celsius y hashes de los dos NetCDF.
-2. **Control de calidad:** calendario diario completo, orden temporal, duplicados, ausentes/no finitos y Tmin≤Tmax.
-3. **Ventanas válidas:** un día inválido excluye cualquier emisión que lo utilice en los siete días de historia o tres de objetivo. No se imputa la etiqueta. En estos originales no se encontraron días inválidos.
-4. **Diagnóstico de extremos:** estadísticas y rangos intercuartílicos mensuales de 1981–2010. Se conservan extremos válidos. Los atributos min/max del NetCDF no se utilizan para recortar: no describen todos los extremos de esta celda.
-5. **Atributos:** siete mínimas, siete máximas y seno/coseno del día del año. Los tres días futuros solo se utilizan como etiqueta.
-6. **Escalado:** StandardScaler dentro de logística y KNN, ajustado solo con entrenamiento de cada pliegue. Se reutiliza para validación/prueba. El árbol se evalúa sin escalar.
-7. **Auditoría del escalado:** `auditoria_escalado.csv` conserva medias, escalas, tamaño y periodo de ajuste de los modelos finales: 96 filas, tres definiciones × dos modelos escalados × 16 atributos.
-8. **Separación temporal:** entrenamiento 1981–2010, validación 2011–2015 y prueba 2016–2020. Hay pliegues crecientes dentro del entrenamiento. α, umbrales y principal se fijan antes de prueba.
+- [tmin_daily_1981_2020_010.nc](https://ndownloader.figshare.com/files/40343728)
+- [tmax_daily_1981_2020_010.nc](https://ndownloader.figshare.com/files/40343707)
 
-No se aplican SMOTE, PCA ni imputación por rutina: cambiarían el protocolo sin evidencia que lo justifique. Los controles y transformaciones anteriores constituyen el preprocesamiento y quedan visibles en el notebook.
+El programa comprueba la procedencia, dimensiones, coordenadas, unidades y huellas de estos archivos antes de extraer la serie. Los datos originales se descargan por separado.
 
-## Verificación
+## Ejecución en Google Colab
 
-El notebook se verificó localmente y el grupo lo ejecutó después en Colab. Se auditó su ZIP: 26 CSV coinciden dentro de la precisión numérica, se recalcularon 36 filas de métricas y se comprobaron 96 registros del escalado. Colab utilizó Python 3.13.18 y NumPy 2.4.6; el entorno local utilizó 3.12.14 y 2.5.4. Las decisiones y los conteos no cambiaron. La evidencia del usuario está en evidencia/colab_usuario y su revisión en evidencia/auditoria_colab_independiente.md.
+1. Guarda los dos NetCDF en una carpeta de Google Drive.
+2. Abre [Google Colab](https://colab.research.google.com/) y carga `Grupo9-Huancane-Colab-Drive.ipynb`.
+3. Ejecuta las celdas en orden. En la sección **Conectar Google Drive**, autoriza el montaje de tu cuenta.
+4. En **Pegar la ruta de la carpeta**, asigna `CARPETA_DATOS`, por ejemplo `/content/drive/MyDrive/TA_IA/PISCOt`. Para una carpeta compartida, añade antes un acceso directo a Mi unidad.
+5. Continúa la ejecución. Al terminar se muestran las métricas y se descarga `resultados_grupo9_drive.zip`, con predicciones, tablas y gráficos.
 
-La prueba principal mantiene 900 emisiones, 330 positivas y 35 rachas frías. F0,5: logística 0,7916; persistencia 0,7152; mensual 0,6677. Brier: mezcla 0,113003 frente a 0,112431 de logística. La hipótesis complementaria sigue sin apoyo.
+Se requiere Python 3.12 o superior. No se necesita GPU. Por defecto, el notebook copia los archivos al almacenamiento temporal de Colab para acelerar su lectura; los originales de Drive se conservan.
 
-En tu ZIP, abre `metricas_prueba.csv` y filtra `thermal=-3` y `beta=0.5`. `principal=True` indica la elección en validación. `verificacion_informe.json` registra si datos y cifras coinciden. Las cifras se comprueban después de evaluar; no se retocan modelos para forzar la coincidencia.
+## Ejecución local
 
-## Pendientes del grupo
+Instala las dependencias en un entorno virtual y coloca los dos NetCDF en una carpeta `data`:
 
-Repositorio privado: https://github.com/GustavoGarciaPUCP/ventana-andina-huancane
+```bash
+python -m pip install -r codigo/requirements.txt
+python codigo/experimento.py all --data-dir data --out-dir resultados
+```
 
-Completen las contribuciones reales, revisen la versión presentada y concedan lectura a los evaluadores. Los nombres para Paideia siguen siendo **Grupo9-TA-Final.pdf** y **Grupo9-TA-Exposicion.pptx**. Los resultados térmicos no demuestran por sí solos éxito de lotes ni pérdidas económicas evitadas.
+La fase `prepare` permite ejecutar por separado el preprocesamiento y la selección. La fase `test` utiliza los modelos y decisiones guardados por `prepare` para evaluar el periodo reservado.
 
-Las huellas de los datos se calculan por bytes. La huella lógica del programa utiliza las funciones y parámetros como texto normalizado, para funcionar de la misma manera en Windows y Colab.
+## Diseño del experimento
 
-## Archivos para comprender y revisar
+El preprocesamiento comprueba calendario, duplicados, valores ausentes, finitud y consistencia entre mínimas y máximas. Se conservan los extremos válidos. Los 16 atributos son las mínimas y máximas de los últimos siete días y dos componentes del calendario anual. Logística y vecinos incorporan un escalado aprendido exclusivamente con el entrenamiento de cada etapa.
 
-Grupo9-Guia-Resultados-y-Defensa.pdf explica NetCDF, el feedback, el preprocesamiento, los resultados y los requisitos del PDF académico. Es material de estudio independiente del informe formal. El Word final incluye la ejecución real de Colab.
+El entrenamiento abarca 1981–2010, con tres particiones internas crecientes para elegir hiperparámetros mediante Brier. La validación de 2011–2015 determina el peso de la mezcla, los umbrales de aviso y el modelo principal. La prueba de 2016–2020 conserva esas decisiones y evalúa los seis métodos en las mismas fechas. La métrica principal es F₀,₅, acompañada de precisión, exhaustividad, F₁ y Brier; también se examinan variación anual, sensibilidad térmica e intervalos exploratorios por bloques.
+
+En la ejecución principal, la logística obtuvo F₀,₅ = 0,7916, frente a 0,7152 de persistencia y 0,6677 de frecuencia mensual. La mezcla mejoró al árbol en Brier, pero no a la logística. Estas cifras corresponden a 900 emisiones de prueba y a la etiqueta térmica definida, con ventanas solapadas.
+
+## Referencia de los datos
+
+Huerta, A. et al. (2023). *High-resolution grids of daily air temperature for Peru — the new PISCOt v1.2 dataset*. Scientific Data, 10, 847. https://doi.org/10.1038/s41597-023-02777-w
