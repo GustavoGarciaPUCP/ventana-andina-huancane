@@ -8,34 +8,38 @@ Comparamos regresión logística, árbol de decisión, vecinos más cercanos y u
 
 ## Código
 
-- [Grupo9-Huancane-Colab-Drive.ipynb](Grupo9-Huancane-Colab-Drive.ipynb): notebook para ejecutar el experimento en Google Colab con datos de Drive.
-- [codigo/experimento.py](codigo/experimento.py): implementación del preprocesamiento, selección de modelos y evaluación.
-- [codigo/requirements.txt](codigo/requirements.txt): dependencias de la ejecución local de referencia.
+- [Grupo9-Huancane.ipynb](Grupo9-Huancane.ipynb). Notebook de la entrega con preprocesamiento, ajuste, evaluación y gráficas.
+- [codigo/experimento.py](codigo/experimento.py). Implementación de referencia que extrae la serie de los NetCDF originales.
+- [codigo/requirements.txt](codigo/requirements.txt). Dependencias de la ejecución local de referencia.
 
 ## Datos
 
 Utilizamos las temperaturas mínimas y máximas diarias de **PISCOt v1.2**, malla de 0,10°, para 1981–2020. La celda analizada está centrada en −15,225° de latitud y −69,755° de longitud.
 
-Los archivos originales están disponibles en el [repositorio de PISCOt en Figshare](https://doi.org/10.6084/m9.figshare.22712365.v3):
+El [CSV de la entrega](PISCOt_Huancane_1981_2020.csv) contiene las 14 610 observaciones diarias de la celda. La columna `fecha` usa el formato `AAAA-MM-DD`. Las columnas `tmin` y `tmax` están en °C.
+
+Los NetCDF de origen están disponibles en el [repositorio de PISCOt en Figshare](https://doi.org/10.6084/m9.figshare.22712365.v3).
 
 - [tmin_daily_1981_2020_010.nc](https://ndownloader.figshare.com/files/40343728)
 - [tmax_daily_1981_2020_010.nc](https://ndownloader.figshare.com/files/40343707)
 
-El programa comprueba la procedencia, dimensiones, coordenadas, unidades y huellas de estos archivos antes de extraer la serie. Los datos originales se descargan por separado.
+Durante la extracción se comprobaron las dimensiones, coordenadas, unidades y huellas de ambos archivos. El CSV reúne las dos series de la celda con la precisión de los datos extraídos.
 
 ## Ejecución en Google Colab
 
-1. Guarda los dos NetCDF en una carpeta de Google Drive.
-2. Abre [Google Colab](https://colab.research.google.com/) y carga `Grupo9-Huancane-Colab-Drive.ipynb`.
-3. Ejecuta las celdas en orden. En la sección **Conectar Google Drive**, autoriza el montaje de tu cuenta.
-4. En **Pegar la ruta de la carpeta**, asigna `CARPETA_DATOS`, por ejemplo `/content/drive/MyDrive/TA_IA/PISCOt`. Para una carpeta compartida, añade antes un acceso directo a Mi unidad.
-5. Continúa la ejecución. Al terminar se muestran las métricas y se descarga `resultados_grupo9_drive.zip`, con predicciones, tablas y gráficos.
+1. Descarga el notebook y el CSV de este repositorio.
+2. Abre el `.ipynb` en [Google Colab](https://colab.research.google.com/) y ejecuta todas las celdas.
+3. Selecciona `PISCOt_Huancane_1981_2020.csv` cuando aparezca el selector. Si el CSV ya está en la carpeta de trabajo, el notebook lo carga por nombre.
 
-Se requiere Python 3.12 o superior. No se necesita GPU. Por defecto, el notebook copia los archivos al almacenamiento temporal de Colab para acelerar su lectura; los originales de Drive se conservan.
+El notebook muestra las métricas y las gráficas. Las tablas completas, las decisiones de validación y las predicciones se guardan en `resultados_grupo9/`.
 
 ## Ejecución local
 
-Instala las dependencias en un entorno virtual y coloca los dos NetCDF en una carpeta `data`:
+Para ejecutar el notebook en Jupyter, coloca el CSV en la misma carpeta que el `.ipynb` y ejecuta todas las celdas.
+
+### Reproducción desde los NetCDF originales
+
+Instala las dependencias en un entorno virtual y coloca los dos NetCDF en una carpeta `data`.
 
 ```bash
 python -m pip install -r codigo/requirements.txt
